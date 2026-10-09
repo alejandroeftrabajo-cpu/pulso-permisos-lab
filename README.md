@@ -1,24 +1,17 @@
-# PERMISOS 2D · Revisión visual controlada
-IES Virgen de la Caridad · Loja
+# PERMISOS 2D · Laboratorio V2
 
-## Origen
-Copia de la versión 6.7 del laboratorio público `alejandroeftrabajo-cpu/pulso-permisos-lab`.
-Se preserva el nombre del repositorio y los archivos originales de funcionamiento.
+## Alcance
+Prototipo visual independiente con dos vistas funcionales de demostración. NO está conectado al motor original, Google Sheets ni Apps Script. Los archivos `app.js`, `analytics.js` y `ledger.js` se incluyen intactos como referencia para integración posterior.
 
-## Cambios
-- `index.html`: marca PERMISOS 2D, título, identidad institucional, breadcrumb del Ecosistema Digital, banner de Profesorado y botón de menú móvil. Iconos SVG locales en navegación.
-- `styles.css`: ajustes de sidebar, cabecera, banner y menú responsive; reglas añadidas al final sin reconstruir los estilos existentes.
-- `identity-ui.js` (nuevo): abre/cierra el menú en dispositivos estrechos; no accede a solicitudes, autenticación ni almacenamiento.
-- `analytics.js`: **solo** sustitución de la denominación visible en el informe generado en navegador. Cálculos intactos.
+## Pruebas previstas
+Navegación Profesorado/Dirección, meses anterior/siguiente, selección de fecha, revisión de solicitud, bloqueo al alcanzar dos días comprometidos, búsqueda y menú móvil.
 
-## Sin cambios
-`app.js`, `ledger.js`, `logo.jpg`; cálculos, formularios, datos ficticios, permisos y backend.
+## No implementado
+Autenticación real, resolución administrativa, memoria PDF, integración backend, criterios normativos oficiales. No sustituir producción.
 
-## Validación pendiente
-Revisión real en Safari móvil, iPad vertical y horizontal, escritorio y flujos de navegación.
-La ejecución automatizada del navegador en este entorno está bloqueada.
-No existe PWA manifest en la copia inspeccionada. No se ha añadido ni modificado autenticación.
-
-## Publicación
-No publicado. GitHub denegó la creación de la rama mediante la integración (403).
-Se entrega un paquete revisable para subir manualmente a una rama nueva; no sustituir `main`.
+## Condiciones de aceptación para integración
+1. Aprobación visual en iPad horizontal y vertical, móvil y escritorio.
+2. Contrato de datos entre frontend y Apps Script.
+3. Pruebas de regresión de reglas y permisos.
+4. Pruebas de seguridad por rol y autenticación corporativa.
+5. Validación documental y estadística antes de activar memoria real.

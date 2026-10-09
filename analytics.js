@@ -1,4 +1,4 @@
-/* PERMISOS 2D · laboratorio — Analítica de simulación; no lee datos personales reales. */
+/* Permiso x Caridad v6.7 — Analítica de simulación; no lee datos personales reales. */
 (function(){
 'use strict';
 const el=id=>document.getElementById(id);
@@ -35,20 +35,20 @@ function printable(){
  const visibleMonths=monthKeys.filter(m=>el('analyticsPeriod').value==='all'||periodOf(m+'-01')===Number(el('analyticsPeriod').value));const mon=visibleMonths.map(m=>tr(months[monthKeys.indexOf(m)],s.rows.filter(r=>r.d.startsWith(m)).length)).join('');
  const top=s.groups.slice(0,8).map(([d,a])=>tr(short(d),a.length)).join('');
  const rate=s.rows.length?(s.adjacent/s.rows.length*100).toFixed(1).replace('.',','):'0';
- const html=`<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Memoria de permisos · PERMISOS 2D · DEMOSTRACIÓN</title><style>
+ const html=`<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Memoria de permisos · PERMISO x CARIDAD · DEMOSTRACIÓN</title><style>
  @page{size:A4;margin:17mm}body{font-family:Arial,sans-serif;color:#173b47;font-size:11pt;line-height:1.5}
  h1{font-size:24pt;margin:6px 0;color:#145b69}h2{font-size:15pt;color:#145b69;margin:23px 0 8px}
  .eyebrow{letter-spacing:2px;color:#ac5877;font-size:9pt}.warn{background:#fff0e5;padding:12px;border-left:4px solid #dc917e}
  table{border-collapse:collapse;width:100%;font-size:10pt}td{padding:7px 9px;border-bottom:1px solid #dce8e6}td:last-child{text-align:right;font-weight:bold}
  .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}.small{color:#57717c;font-size:9pt}
- </style></head><body><div class="eyebrow">PERMISOS 2D · IES VIRGEN DE LA CARIDAD · LOJA</div><h1>Memoria estadística de permisos</h1><p>Curso 2026/2027 · ${period}</p><div class="warn"><strong>DOCUMENTO DE DEMOSTRACIÓN — DATOS FICTICIOS.</strong> No constituye memoria oficial ni refleja las solicitudes reales del centro.</div>
+ </style></head><body><div class="eyebrow">PORTAL PERMISO x CARIDAD · IES VIRGEN DE LA CARIDAD · LOJA</div><h1>Memoria estadística de permisos</h1><p>Curso 2026/2027 · ${period}</p><div class="warn"><strong>DOCUMENTO DE DEMOSTRACIÓN — DATOS FICTICIOS.</strong> No constituye memoria oficial ni refleja las solicitudes reales del centro.</div>
  <h2>1. Resumen ejecutivo</h2><p>En el periodo analizado figuran ${s.rows.length} solicitudes simuladas, de las que ${s.granted} constan como concedidas, ${s.pending} permanecen pendientes y ${s.denied} figuran como denegadas. Se identifican ${s.conflicts.length} fechas con más de ${CAP} solicitudes. Estas cifras describen el laboratorio y no deben extrapolarse al centro.</p>
  <h2>2. Distribución temporal</h2><div class="cols"><table>${mon}</table><table>${top||tr('Sin fechas','0')}</table></div>
  <h2>3. Proximidad a días no lectivos</h2><p>${s.adjacent} solicitudes (${rate} %) recaen en días lectivos inmediatamente adyacentes a un día no lectivo según el calendario parcial configurado. Esta coincidencia no demuestra motivación personal ni causalidad.</p>
  <h2>4. Concurrencias y aplicación normativa</h2><p>${s.conflicts.length} fechas superan el cupo simulado de ${CAP} solicitudes. No constan registros específicos que acrediten la aplicación de un criterio normativo o un desempate. Es necesario documentar las resoluciones antes de elaborar conclusiones institucionales.</p>
  <h2>5. Denegaciones y disfrute</h2><p>Denegaciones registradas: ${s.denied}. Motivos documentados: sin datos. Días efectivamente disfrutados: sin datos. Los estados de concesión no acreditan por sí mismos el disfrute efectivo.</p>
  <h2>6. Limitaciones y propuestas</h2><p>Para una memoria oficial deben validarse el calendario escolar completo, las fechas de registro y resolución, el motivo de cada denegación, el criterio aplicado, la trazabilidad de cambios y el disfrute efectivo. Se recomienda comparar tasas por día lectivo disponible para evitar sesgos entre meses.</p>
- <p class="small">Informe generado en el navegador a partir de datos ficticios de PERMISOS 2D · laboratorio visual. No incluye datos personales en las tablas agregadas.</p></body></html>`;
+ <p class="small">Informe generado en el navegador a partir de datos ficticios de Permiso x Caridad v6.7. No incluye datos personales en las tablas agregadas.</p></body></html>`;
  const w=window.open('','_blank');
  if(!w){alert('Safari ha bloqueado la ventana del informe. Permite ventanas emergentes para generar el PDF.');return}
  w.document.open();w.document.write(html);w.document.close();w.focus();
