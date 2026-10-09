@@ -13,3 +13,78 @@
  .casecounts{grid-template-columns:repeat(3,minmax(0,1fr))}
  .casegrid{grid-template-columns:1fr}
 }
+
+/* PULSO v6.3 · Sistema visual editorial
+   Azul petróleo / coral institucional / granate del escudo */
+:root{
+ --navy:#123340;--ink:#193748;--muted:#617c88;--bg:#eef4f3;
+ --line:#dce8e6;--pink:#bd627e;--blue:#357f93;--amber:#c48b38;--red:#c65b66;
+ --teal:#126778;--coral:#dc917e;--surface:#fff;--soft:#e5f0ee;
+}
+body{background:var(--bg);color:var(--ink);font-size:14px}
+.sidebar{background:linear-gradient(166deg,#10313e 0%,#173e49 62%,#123340 100%)!important;
+ box-shadow:10px 0 34px rgba(8,44,53,.09)}
+.sidebar h1{letter-spacing:-1.9px}
+.sidebar h1 span{color:#e9a49a}
+.org{color:#e3a6ae}
+.sidebar .nav{color:#b9d1d5;transition:background .18s ease,color .18s ease,transform .18s ease}
+.sidebar .nav:hover{background:#ffffff13;color:#fff;transform:translateX(2px)}
+.sidebar .nav.selected{background:#ffffff20;box-shadow:inset 4px 0 #e7a09a;color:#fff}
+.navtitle{color:#a2c0c4}.sidefoot{border-color:#ffffff25;color:#a5d7c9}
+.top{background:#fffefdf2;box-shadow:0 1px 0 #d9e7e4}
+.top strong{color:var(--navy)}.sim{background:#e4f3ee;color:#166f62}
+main{max-width:1540px}
+.heading h2{letter-spacing:-1.9px;line-height:1.12}
+.heading em{color:#b55e7c}
+.heading p,.cardhead p,.alerts>p,.case .cardhead p,.registry .cardhead p{color:#617b87}
+.over{color:#ac5877;letter-spacing:2px}
+.card,.metric{border:1px solid #d9e6e4;box-shadow:0 8px 32px rgba(14,57,65,.045)}
+.card{border-radius:19px}
+.metric{border-radius:16px;position:relative;overflow:hidden}
+.metric:not(.mainmetric):before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;
+ background:linear-gradient(90deg,#d9a29b,#e4c5c0)}
+.metric>span,.profile{color:#55717d}
+.metric p,.fine,.subdued{color:#617d89}
+.metric strong{color:#173948}
+.mainmetric{background:linear-gradient(135deg,#0e5261,#177889 78%,#287f8d);
+ box-shadow:0 15px 32px rgba(14,90,104,.16)}
+.mainmetric strong{color:#fff}.mainmetric>span,.mainmetric p{color:#e2f2f1}
+.progress{background:#ffffff35}.progress i{background:linear-gradient(90deg,#f4c4ad,#ed9a98)}
+.calendar{gap:8px}
+.day{background:#fff;border-color:#dce8e6;color:#204452;transition:background .15s,border-color .15s,transform .15s}
+.day:hover:not(.off){background:#e8f4f2;border-color:#79b4b7;transform:translateY(-1px)}
+.day.selected{outline:2px solid #1c8393;outline-offset:1px;background:#e2f4f2}
+.day.off{background:#f0f3f3;color:#a6b7bc}
+.day.conflict{background:#fff0ef;border-color:#e8b4b0}
+.month button{color:#226779;border-color:#d6e6e3}
+.month button:hover{background:#e5f2f0}
+.legend{border-top:1px solid #e4ecea;padding-top:15px;margin-top:20px}
+.legend span{color:#55727d}
+.cta{background:linear-gradient(120deg,#126778,#1b8492);border:0;color:#fff;
+ box-shadow:0 8px 18px #15697a24;transition:filter .15s,transform .15s}
+.cta:hover:not(:disabled){filter:brightness(1.08);transform:translateY(-1px)}
+.cta:disabled{box-shadow:none}
+.selection{background:#edf7f5;border-color:#cbe5df}
+.availability{border-top:1px solid #e4ecea}
+.casecounts div{background:#eaf3f1;border:1px solid #dcebe7}
+.casecounts small{color:#53737e}.casecounts strong{color:#174b59}
+.rules{background:#f0f5f4;border:1px solid #dce8e6}
+.locked{background:#e7f1ef;color:#426d74}
+.alert-btn{background:#fff2f0;border:1px solid #e9c5bd;color:#854b51}
+.alert-btn:hover{background:#ffe9e6}
+.tag.CONCEDIDO,.tag.concedido{background:#dff1f0;color:#136675}
+.tag.SOLICITADO,.tag.solicitado{background:#fff1da;color:#95641e}
+.filters input,.filters select,.profile select{border-color:#d3e4e1}
+.filters input:focus,.filters select:focus{border-color:#38899a}
+td{border-color:#e5efed}th{color:#587987}
+.dialog{border:1px solid #dbe9e6;box-shadow:0 30px 90px #0a364c55}
+.shade{background:#092c39aa}
+.year{border-color:#dce9e5;color:#315a66}
+:focus-visible{outline:3px solid #4e9fac!important;outline-offset:3px}
+@media(max-width:720px){
+ .sidebar{background:#123340!important}
+ .card,.metric{border-radius:14px}
+ .heading h2{letter-spacing:-1px}
+ .calendar{gap:4px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
