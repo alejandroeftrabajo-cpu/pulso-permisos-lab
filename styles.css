@@ -187,3 +187,52 @@ td{border-color:#e5efed}th{color:#587987}
 /* v6.7 — Registro documental, impresión y nueva marca */
 .sidebar h1{font-size:29px!important;line-height:1.18!important;letter-spacing:-1.4px!important;overflow-wrap:anywhere}.sidebar h1 span{color:#e6a19a}.sidebar h1 small{font-size:10px!important;letter-spacing:2px!important}
 .ledger-table{overflow-x:auto;margin-top:18px}.ledger-table table{width:100%;border-collapse:collapse;min-width:690px}.ledger-table th,.ledger-table td{padding:12px;border-bottom:1px solid #dce8e6;text-align:left;font-size:12px}.ledger-table th{color:#587681;background:#f2f7f5}.ledger-form{margin-top:20px;background:#f2f7f5;border-radius:14px;padding:18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.ledger-form[hidden]{display:none!important}.ledger-form label{font-size:12px;color:#42616b;display:flex;flex-direction:column;gap:6px}.ledger-form input,.ledger-form select,.ledger-form textarea{border:1px solid #cbdeda;background:#fff;border-radius:8px;padding:10px;font:inherit;min-width:0}.ledger-actions{display:flex;align-items:center;gap:12px}.ledger-actions button{cursor:pointer}.ledger-form label:nth-child(4),.ledger-form label:nth-child(5),.ledger-form label:nth-child(6){grid-column:span 2}.analytics-note{line-height:1.6}@media(max-width:650px){.ledger-form{grid-template-columns:1fr}.ledger-form label:nth-child(n){grid-column:1}}
+
+
+/* PERMISOS 2D · capa exclusivamente visual, basada en la v6.7 */
+.sidebar h1{font-size:30px!important;letter-spacing:-.9px!important;line-height:1.15!important;overflow-wrap:normal!important;white-space:normal}
+.sidebar h1 span{color:#e6a19a}
+.sidebar h1 small{display:block;font-size:10px!important;letter-spacing:2px!important;margin-top:12px!important;color:#c3d8d8}
+.sidebar .org{max-width:235px;letter-spacing:1.3px;line-height:1.7}
+.sidebar .org span{display:block}
+.sidebar .nav{display:flex;align-items:center;gap:11px;min-height:54px;touch-action:manipulation}
+.sidebar .nav b{margin-left:auto}
+.nav-icon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;flex:none}
+.nav-icon svg{width:19px;height:19px}
+.sidebar .nav:focus-visible,.sidebar-toggle:focus-visible{outline:3px solid #edab9b!important;outline-offset:3px}
+.sidebar .nav:hover{background:#ffffff1d}
+.identity-header{gap:18px}
+.identity-kicker{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:11px;line-height:1.7;letter-spacing:.7px}
+.identity-divider{opacity:.55}
+.identity-name{line-height:1.2}
+.sidebar-toggle{display:none;width:44px;height:44px;flex:none;align-items:center;justify-content:center;border:1px solid #d6e6e4;background:#fff;border-radius:11px;color:#1d5d6b;cursor:pointer}
+.sidebar-toggle svg{width:23px;height:23px}
+.sidebar-backdrop[hidden]{display:none!important}
+.heading h2{font-size:clamp(28px,3vw,40px);letter-spacing:-1.1px}
+.heading p{max-width:650px;line-height:1.5}
+@media(max-width:900px){
+ .sidebar-toggle{display:flex}
+ .sidebar{position:fixed!important;left:0;top:0;bottom:0;z-index:1100;width:min(295px,82vw)!important;
+  overflow-y:auto;transform:translateX(-105%);transition:transform .22s ease;box-shadow:14px 0 50px #0b2e3c35}
+ body.nav-open .sidebar{transform:translateX(0)}
+ .sidebar-backdrop:not([hidden]){position:fixed;inset:0;background:#102d3b99;z-index:1090;display:block}
+ .content{margin-left:0!important;width:100%!important;min-width:0!important}
+ .identity-header{padding:16px 20px!important;gap:12px}
+ .identity-main{flex:1;min-width:0}
+ .identity-account{min-width:0;max-width:260px}
+ .sidebar .logo{width:84px;height:84px;margin:10px auto}
+ .sidebar h1{text-align:center!important;margin:26px 0 34px!important}
+ .sidebar .org{text-align:center;margin:16px auto 0}
+ .sidebar .navtitle{text-align:center}
+}
+@media(max-width:600px){
+ .identity-header{align-items:flex-start;flex-wrap:wrap}
+ .identity-main{flex-basis:calc(100% - 60px)}
+ .identity-name{font-size:22px!important;overflow-wrap:anywhere}
+ .identity-account{order:3;flex:1 0 100%;max-width:100%;border-top:1px solid #e1ece8;padding-top:10px;align-items:flex-start!important;text-align:left!important}
+ .identity-avatar{margin-left:auto}
+ .identity-email strong{overflow-wrap:anywhere}
+ .identity-kicker{font-size:10px}
+ .heading h2{font-size:30px}
+}
+@media(prefers-reduced-motion:reduce){.sidebar{transition:none!important}}

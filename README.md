@@ -1,23 +1,24 @@
-# Portal Permiso x Caridad · Laboratorio v6.7
+# PERMISOS 2D · Revisión visual controlada
+IES Virgen de la Caridad · Loja
 
-Base visual conservada de v6.6. Nueva marca y registro de resoluciones ficticias.
+## Origen
+Copia de la versión 6.7 del laboratorio público `alejandroeftrabajo-cpu/pulso-permisos-lab`.
+Se preserva el nombre del repositorio y los archivos originales de funcionamiento.
 
-## Funciones
-- Dashboard Profesorado y Dirección con datos de prueba.
-- Analítica por fecha solicitada, no por fecha de presentación (dato no disponible).
-- Registro en memoria de resolución, motivo, referencia, fecha y observaciones.
-- Recalcula indicadores del laboratorio a partir del último estado simulado.
-- Genera una vista imprimible para Guardar como PDF en Safari.
-- Incluye PDF demostrativo maquetado con ReportLab, separado de la exportación del navegador.
+## Cambios
+- `index.html`: marca PERMISOS 2D, título, identidad institucional, breadcrumb del Ecosistema Digital, banner de Profesorado y botón de menú móvil. Iconos SVG locales en navegación.
+- `styles.css`: ajustes de sidebar, cabecera, banner y menú responsive; reglas añadidas al final sin reconstruir los estilos existentes.
+- `identity-ui.js` (nuevo): abre/cierra el menú en dispositivos estrechos; no accede a solicitudes, autenticación ni almacenamiento.
+- `analytics.js`: **solo** sustitución de la denominación visible en el informe generado en navegador. Cálculos intactos.
 
-## Límites críticos
-- NO es un sistema de autenticación, ni de autorizaciones administrativas.
-- El registro de resoluciones se pierde al recargar: no hay persistencia, auditoría inmutable ni conexión a Sheets.
-- El calendario de no lectivos es parcial y no debe usarse para informes reales.
-- Los estados iniciales de concesión no tienen motivación documental asociada.
-- La detección de concurrencias no equivale a desempate o aplicación de normativa.
-- El filtro temporal usa la fecha solicitada; no hay fecha de registro.
-- El PDF del botón se obtiene mediante impresión del navegador y requiere revisión en Safari.
+## Sin cambios
+`app.js`, `ledger.js`, `logo.jpg`; cálculos, formularios, datos ficticios, permisos y backend.
 
-## Publicación de laboratorio
-Subir index.html, styles.css, app.js, analytics.js, ledger.js y logo.jpg a GitHub Pages. Mantener la versión previa en el historial Git.
+## Validación pendiente
+Revisión real en Safari móvil, iPad vertical y horizontal, escritorio y flujos de navegación.
+La ejecución automatizada del navegador en este entorno está bloqueada.
+No existe PWA manifest en la copia inspeccionada. No se ha añadido ni modificado autenticación.
+
+## Publicación
+No publicado. GitHub denegó la creación de la rama mediante la integración (403).
+Se entrega un paquete revisable para subir manualmente a una rama nueva; no sustituir `main`.
