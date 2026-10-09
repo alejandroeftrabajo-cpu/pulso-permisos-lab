@@ -1,11 +1,3 @@
-# PULSO Permisos v6.4 · Identidad editorial
+PULSO v6.5 — Refinamiento de la barra lateral.
 
-Laboratorio estático con datos ficticios. Cabecera de identidad con nombre completo, rol y correo ficticio `example.invalid`. No autentica cuentas de Google.
-
-## Validación pendiente para uso real
-- Autenticación institucional y recuperación de identidad verificada.
-- Tabla de usuarios autorizados y roles de Dirección.
-- Autorización por operación en backend Apps Script.
-- Pruebas de privacidad, normativa y calendario.
-
-Subir `index.html`, `styles.css`, `app.js` y `logo.jpg` a GitHub Pages. El sistema real permanece intacto.
+Logotipo, denominación del centro, localidad, marca PULSO y subtítulo centrados y jerarquizados en escritorio/iPad horizontal. Navegación y funcionalidades intactas. Datos ficticios. Sin conexión a Google Sheets ni Apps Script.
