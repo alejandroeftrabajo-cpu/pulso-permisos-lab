@@ -88,3 +88,23 @@ td{border-color:#e5efed}th{color:#587987}
  .calendar{gap:4px}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* PULSO 6.4: cabecera de identidad; no representa una sesión real */
+.identity-header{height:auto;min-height:126px;padding:22px 35px;display:flex;gap:22px;align-items:center;justify-content:space-between;background:linear-gradient(105deg,#fff 0%,#fbfefd 75%,#f0f7f5 100%);border-bottom:1px solid #d9e8e4;letter-spacing:normal}
+.identity-main{min-width:0;flex:1}
+.identity-kicker{display:flex;align-items:center;gap:9px;color:#547781;font-size:10px;font-weight:800;letter-spacing:1.3px;flex-wrap:wrap}
+.identity-dot{height:8px;width:8px;border-radius:50%;background:#228a81;box-shadow:0 0 0 4px #e4f4ef}
+.identity-divider{color:#a3bbb9}.identity-kicker #crumb{color:#a95374}
+.identity-name{font:800 clamp(22px,2.4vw,32px)/1.18 Manrope,Arial,sans-serif;letter-spacing:-.8px;color:#143f4b;margin-top:9px;overflow-wrap:anywhere}
+.identity-role{color:#67818b;font-size:12px;margin-top:6px;font-weight:500}
+.identity-account{text-align:right;max-width:340px;min-width:205px;display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+.identity-demo{color:#19776f;background:#e4f3ef;border:1px solid #cfe8e0;border-radius:50px;padding:8px 11px;font-size:9px;font-weight:800;letter-spacing:.6px;white-space:nowrap}
+.identity-email{display:flex;flex-direction:column;gap:4px}.identity-email-label{font-size:9px;color:#6d8891;letter-spacing:.6px;font-weight:800}.identity-email strong{font-size:12px;color:#1b5361;overflow-wrap:anywhere;font-weight:700}
+.identity-avatar{width:51px;height:51px;flex:0 0 51px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,#155766,#278e94);color:white;font:800 16px Manrope,Arial;box-shadow:0 7px 20px #0f596525}
+@media(max-width:1000px){.identity-header{padding:17px 20px;gap:12px}.identity-account{min-width:160px;max-width:245px}.identity-name{font-size:23px}.identity-demo{white-space:normal;text-align:center}}
+@media(max-width:720px){.identity-header{padding:17px 15px;min-height:0;flex-wrap:wrap}.identity-main{flex-basis:calc(100% - 68px)}.identity-avatar{order:1}.identity-account{order:2;flex:1;max-width:none;min-width:0;text-align:left;align-items:flex-start;border-top:1px solid #e1ece8;padding-top:12px}.identity-name{font-size:22px}.identity-kicker{font-size:9px}.identity-demo{font-size:9px}.identity-email strong{font-size:11px}}
+/* Neutraliza las reglas de la antigua barra superior */
+.identity-header>.identity-main{display:block;min-width:0}
+.identity-header>.identity-account{display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+.identity-header>.identity-avatar{display:grid;place-items:center}
+@media(max-width:720px){.identity-header>.identity-account{align-items:flex-start}}
